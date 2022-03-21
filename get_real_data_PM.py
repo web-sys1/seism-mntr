@@ -2,8 +2,7 @@ from obspy.clients.fdsn import Client
 from obspy import UTCDateTime
 from obspy import read
 #import matplotlib.pyplot as plt   # matplotlib and its pyplot sub-package is used for plotting
-#import numpy as np                    # numpy is used for numerical computing and with arrays
-
+#import numpy as np                # numpy is used for numerical computing and with arrays
 
 client = Client("GFZ")
 
