@@ -20,7 +20,7 @@ try:
  wave1.detrend(type='linear')
  wave1.plot(type="dayplot", interval=30, size=(1360, 800), dpi=164, number_of_ticks=6, tick_rotation=45,
         right_vertical_labels=True,
-        vertical_scaling_range=1800, one_tick_per_line=True,
+        vertical_scaling_range=5e3, one_tick_per_line=True,
         color=['k', 'r', 'b', 'g'], show_y_UTC_label=True,
         outfile='PM/ROSA/PM_12H_ROSA_BHZ.png')
 except Exception as e:
