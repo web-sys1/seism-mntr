@@ -5,7 +5,7 @@ from obspy import read
 #import numpy as np                    # numpy is used for numerical computing and with arrays
 
 
-NIEP_client = Client("GFZ")
+client = Client("GFZ")
 
 t1 = UTCDateTime.now()
 
@@ -13,7 +13,7 @@ start = t1 - 60*60*12
 endtime = start + 60*60*12
 
 try:
- wave1 = NIEP_client.get_waveforms('PM', 'ROSA', '--', 'BHZ', start.replace(minute=0, second=1), endtime)
+ wave1 = client.get_waveforms('PM', 'ROSA', '--', 'BHZ', start.replace(minute=0, second=1), endtime)
  wave1.filter('highpass', freq=0.2, corners=2, zerophase=True)
  #wave1.filter("bandpass", freqmin=0.12, freqmax=25.00, corners=3, zerophase=False)
  wave1.detrend(type='demean')
