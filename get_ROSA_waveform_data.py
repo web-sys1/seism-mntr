@@ -4,7 +4,7 @@ from obspy import read
 #import matplotlib.pyplot as plt   # matplotlib and its pyplot sub-package is used for plotting
 #import numpy as np                    # numpy is used for numerical computing and with arrays
 
-client = Client(url="http://ceida.ipma.pt/")
+client = Client(base_url="http://ceida.ipma.pt/")
 
 t1 = UTCDateTime.now()
 
@@ -21,6 +21,6 @@ try:
         right_vertical_labels=True,
         vertical_scaling_range=6e3, one_tick_per_line=True,
         color=['k', 'r', 'b', 'g'], show_y_UTC_label=True,
-        outfile='PM/ROSA/PM_12H_ROSA_BHZ.png')
+        outfile='PM/ROSA/PM_12H_ROSA_HHZ.png')
 except Exception as e:
  print('Error while fetching: ', e)
