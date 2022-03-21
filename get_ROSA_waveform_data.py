@@ -18,7 +18,7 @@ try:
  wave1.detrend(type='demean')
  wave1.detrend(type='linear')
  wave1.plot(type="dayplot", interval=30, size=(1360, 800), dpi=164, number_of_ticks=6, tick_rotation=45,
-        right_vertical_labels=True,
+        right_vertical_labels=False,
         vertical_scaling_range=6e3, one_tick_per_line=True,
         color=['k', 'r', 'b', 'g'], show_y_UTC_label=True,
         outfile='PM/ROSA/PM_12H_ROSA_HHZ.png')
