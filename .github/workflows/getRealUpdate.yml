@@ -42,7 +42,7 @@ jobs:
     - name: GET PM/ROSA Data in HHZ
       run: |
         python get_ROSA_waveform_data.py
-    - name: Proceed adding file
+    #- name: Proceed adding file
     #  run: |
     #    git add .
         
