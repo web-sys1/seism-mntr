@@ -1,3 +1,3 @@
 # seism-mntr
 
-SEISM MNTR
+SEISMIC MONITOR
