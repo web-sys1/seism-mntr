@@ -13,8 +13,8 @@ endtime = start + 60*60*12
 
 try:
  wave1 = client.get_waveforms('PM', 'ROSA', '--', 'BHZ', start.replace(minute=0, second=1), endtime)
- #wave1.filter('lowpass', freq=0.2, corners=2, zerophase=True)
- wave1.filter("bandpass", freqmin=0.2, freqmax=20, corners=3, zerophase=True)
+ wave1.filter('highpass', freq=1, corners=2, zerophase=True)
+ #wave1.filter("bandpass", freqmin=0.2, freqmax=20, corners=3, zerophase=True)
  wave1.detrend(type='demean')
  wave1.detrend(type='linear')
  wave1.plot(type="dayplot", interval=30, size=(1360, 800), dpi=164, number_of_ticks=6, tick_rotation=45,
